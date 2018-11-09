@@ -2,7 +2,7 @@
 Convert your juypter notebooks to a website
 
 ## ScreenShot
-![screenshot](./screenshot/1.png)
+![screenshot](screenshot/1.png)
 
 ## docker volume
 
@@ -97,11 +97,11 @@ read more for [pelican-ipynb](https://github.com/danielfrg/pelican-ipynb)
 ## Run Service with docker
 
 ```bash
-docker run -v $(pwd)/notebook:/opt/notebook/content -e SITENAME=mysite \
+docker run -v $(pwd)/notebooks:/opt/notebook/content -e SITENAME=mysite \
            -e CATEGORIES_CUSTOM_ORDER=GetStart,Demo \
            -e STATIC_PATHS=img \
            -p 8000:8000 \
-           uoks/nb_2_web
+           uoks/nb_to_web
 ```
 
 The you can access http://localhost:8000 to get the web site 
@@ -111,12 +111,12 @@ The you can access http://localhost:8000 to get the web site
 If you just want to generate the static website, you can run
 
 ```bash
-docker run -v $(pwd)/notebook:/opt/notebook/content \
+docker run -v $(pwd)/notebooks:/opt/notebook/content \
            -v $(pwd)/output:/opt/notebook/output \
            -e SITENAME=mysite \
            -e CATEGORIES_CUSTOM_ORDER=GetStart,Demo \
            -e STATIC_PATHS=img \
-           uoks/nb_2_web make html
+           uoks/nb_to_web make html
 ```
 
 Then push the `output/` to anywhere, e.g. gitpage
