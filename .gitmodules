@@ -1,0 +1,6 @@
+[submodule "plugins/ipynb"]
+	path = plugins/ipynb
+	url = https://github.com/danielfrg/pelican-ipynb.git
+[submodule "plugins/category_custom_order"]
+	path = plugins/category_custom_order
+	url = https://github.com/uoks/pelican-category-custom-order.git

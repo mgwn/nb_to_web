@@ -1,0 +1,7 @@
+beautifulsoup4
+jupyter
+ipython
+nbconvert
+python-gettext
+pelican
+markdown
